@@ -1,0 +1,81 @@
+{
+  "name": "name",
+  "version": "0.0.1",
+  "packageManager": "pnpm@8.6.10",
+  "scripts": {
+    "d5": "uni --mode dev --port 12345",
+    "b5": "uni build --mode dev",
+    "b5p": "uni build --mode prod",
+    "dw": "uni -p mp-weixin --mode dev",
+    "dwp": "uni -p mp-weixin --mode prod",
+    "bw": "uni build -p mp-weixin --mode dev",
+    "bwp": "uni build -p mp-weixin --mode prod",
+    "dev:app": "uni -p app",
+    "dev:custom": "uni -p",
+    "dev:h5": "uni",
+    "dev:h5:ssr": "uni --ssr",
+    "dev:mp-qq": "uni -p mp-qq",
+    "dev:mp-toutiao": "uni -p mp-toutiao",
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "build:app": "uni build -p app",
+    "build:custom": "uni build -p",
+    "build:h5": "uni build",
+    "build:h5:ssr": "uni build --ssr",
+    "build:mp-qq": "uni build -p mp-qq",
+    "build:mp-weixin": "uni build -p mp-weixin",
+    "lint": "eslint .",
+    "lt": "eslint . --fix",
+    "up": "taze major -I",
+    "postinstall": "npx simple-git-hooks"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-app-plus": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-components": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-h5": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-mp-alipay": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-mp-baidu": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-mp-jd": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-mp-kuaishou": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-mp-lark": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-mp-qq": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-mp-toutiao": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-mp-xhs": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3081120230719001",
+    "@vueuse/core": "^10.2.1",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.8",
+    "@dcloudio/types": "^3.3.3",
+    "@dcloudio/uni-automator": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-cli-shared": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/uni-stacktracey": "3.0.0-alpha-3081120230719001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3081120230719001",
+    "@unocss-applet/transformer-applet": "^0.5.3",
+    "@unocss-applet/transformer-attributify": "^0.5.3",
+    "@unocss/transformer-directives": "^0.53.6",
+    "@unocss/transformer-variant-group": "^0.53.6",
+    "eslint": "^8.45.0",
+    "lint-staged": "^13.2.3",
+    "pnpm": "^8.6.10",
+    "simple-git-hooks": "^2.9.0",
+    "taze": "^0.11.2",
+    "typescript": "^5.1.6",
+    "unocss": "^0.53.6",
+    "unocss-applet": "^0.5.3",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.4.6"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
+  }
+}

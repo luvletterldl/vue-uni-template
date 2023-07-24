@@ -1,0 +1,12 @@
+{
+  "cSpell.words": [
+    "miipu",
+    "thum",
+    "WEIXIN"
+  ],
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
