@@ -1,7 +1,7 @@
-import { ResCode } from "~/modules"
+import type { ResCode } from '~/modules'
 
 declare global {
-  type BaseResWrapper<T> = {
+  interface BaseResWrapper<T> {
     data?: T
     code: ResCode
     message: string
