@@ -6,9 +6,9 @@
 # Env
 [install docs](https://juejin.cn/post/7061152158132994061#heading-4)
 
-pnpm v8.6.10
+pnpm v9
 
-nodejs v18.16.1
+nodejs v22
 
 # Setup
 ```bash
