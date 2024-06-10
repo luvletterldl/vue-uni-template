@@ -1,6 +1,6 @@
 import { ResCode, useToken } from '~/modules'
 
-export function request<T>(url: string, options?: { method: 'GET' | 'POST'; header?: HeadersInit | undefined; body?: any }): Promise<T> {
+export function request<T>(url: string, options?: { method: 'GET' | 'POST', header?: HeadersInit | undefined, body?: any }): Promise<T> {
   return new Promise((resolve, reject) => {
     console.log(`${import.meta.env.VITE_APP_APIURL}${url}`)
     uni.request({

@@ -5,14 +5,13 @@ import {
   presetAttributify,
   presetIcons,
   presetUno,
-  // transformerDirectives,
-  // transformerVariantGroup,
+  transformerDirectives,
+  transformerVariantGroup,
 } from 'unocss'
 
 import {
   presetApplet,
   presetRemRpx,
-  transformerApplet,
   transformerAttributify,
 } from 'unocss-applet'
 
@@ -27,7 +26,6 @@ if (isApplet) {
   presets.push(presetApplet())
   presets.push(presetRemRpx())
   transformers.push(transformerAttributify({ ignoreAttributes: ['block'] }))
-  transformers.push(transformerApplet())
 }
 else {
   presets.push(presetUno())
@@ -54,6 +52,8 @@ export default defineConfig({
     ...presets,
   ],
   transformers: [
+    transformerDirectives(),
+    transformerVariantGroup(),
     ...transformers,
   ],
   rules: [

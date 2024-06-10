@@ -2,10 +2,13 @@ import path from 'node:path'
 import { defineConfig } from 'vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import uni from '@dcloudio/vite-plugin-uni'
+import uniModule from '@dcloudio/vite-plugin-uni'
 import UnoCSS from 'unocss/vite'
 import transformerVariantGroup from '@unocss/transformer-variant-group'
 import transformerDirective from '@unocss/transformer-directives'
+
+// @ts-expect-error missing types
+const Uni = uniModule.default || uniModule
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +18,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    Uni(),
     UnoCSS({
       transformers: [
         transformerDirective(),
@@ -26,7 +30,6 @@ export default defineConfig({
       resolvers: [],
       imports: [
         'vue',
-        'vue/macros',
         '@vueuse/core',
       ],
       dts: true,
@@ -41,6 +44,5 @@ export default defineConfig({
         './src/components',
       ],
     }),
-    uni(),
   ],
 })
